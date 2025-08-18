@@ -16,8 +16,8 @@ function loadHTML(className, filePath, index = 0) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	loadHTML('header', 'html/common/header.html', 0);
-	loadHTML('footer', 'html/common/footer.html', document.getElementsByClassName('footer').length - 1);
+	loadHTML('header', '/html/common/header.html', 0);
+	loadHTML('footer', '/html/common/footer.html', document.getElementsByClassName('footer').length - 1);
 });
 
 function gnbMouseenter(){
@@ -44,20 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
 			slidesPerView:'auto',
 			spaceBetween: 80,
 			navigation: {
-				nextEl: container.querySelector(".swiper-button-next"),
-				prevEl: container.querySelector(".swiper-button-prev"),
+				nextEl: container.querySelector(".place-category-panels .swiper-button-next"),
+				prevEl: container.querySelector(".place-category-panels .swiper-button-prev"),
 			},
 		});
 
 		container.dataset.swiperInit = "true"; // 초기화 플래그
 	}
 		
+	// 메인 페스티벌 스와이프
 	new Swiper(document.querySelector(".festival-swiper"), {
 		slidesPerView:'auto',
 		spaceBetween: 40,
 		navigation: {
-			nextEl: document.querySelector(".swiper-button-next"),
-			prevEl: document.querySelector(".swiper-button-prev"),
+			nextEl: document.querySelector(".festival-panels .swiper-button-next"),
+			prevEl: document.querySelector(".festival-panels .swiper-button-prev"),
 		},
 	});
 
@@ -85,4 +86,24 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (firstPanel) {
 		initSwiper(firstPanel);
 	}
+
+});
+
+// 장소찾기 Tab
+document.addEventListener("DOMContentLoaded", () => {
+	const tabItems = document.querySelectorAll(".location-tab .tab-item");
+	const panels = document.querySelectorAll(".location-panel");
+
+	tabItems.forEach((item, index) => {
+		const btn = item.querySelector("button");
+		btn.addEventListener("click", () => {
+		// 모든 탭/패널 비활성화
+		tabItems.forEach((el) => el.classList.remove("-active"));
+		panels.forEach((el) => el.classList.remove("-active"));
+
+		// 클릭한 탭/패널 활성화
+		item.classList.add("-active");
+		panels[index].classList.add("-active");
+		});
+	});
 });
