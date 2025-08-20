@@ -100,11 +100,32 @@
 /* 
     장소찾기
 */
-.location-area {}
-.location-area .title {}
+.location-area {margin-top:100px;}
+.location-area .title {font-size:48px; font-weight:500; color:#111; text-align:center;}
 .location-area .location-box {}
-.location-area .location-box .location-tab {}
-.location-area .location-box .location-tab .tab-item {}
-.location-area .location-box .location-tab .tab-item.-active {color:red}
+.location-area .location-box .location-tab {display:flex; justify-content:center; gap:14px; align-items:center; margin-top:60px;}
+.location-area .location-box .location-tab .tab-item {flex:1; height:48px;}
+.location-area .location-box .location-tab .tab-item > button {width:100%; height:100%; border:1px solid #2d3134; border-radius:4px; background-color:transparent; font-size:20px; color:#000}
+.location-area .location-box .location-tab .tab-item.-active {background-color:#2d3134;}
+.location-area .location-box .location-tab .tab-item.-active > button {background-color:#2d3134; color:#fff;}
 .location-area .location-box .location-panel {display:none;}
 .location-area .location-box .location-panel.-active {display:block;}
+
+
+.search-place-box {padding:22px 55px; background-color:#f8f8f8;}
+.search-place-box .search-units {display:flex; justify-content:space-between; align-items:center;}
+.search-place-box .search-units .sel-units {display:flex; align-items:center;}
+.search-place-box .search-units .sel-units .unit {display:flex; align-items:center; margin-right:40px;}
+.search-place-box .search-units .sel-units .unit .title {margin-right:10px; font-size:18px; font-weight:500; color:#111;}
+.search-place-box .search-units .sel-units .unit .select-val {width:200px; height:50px; padding:0 10px; border:1px solid #cbced7; border-radius:8px; background-color:#fff; font-size:16px;}
+.search-place-box .search-units .search-txts {display:flex; align-items:center;}
+.search-place-box .search-units .search-txts label {margin-right:10px; font-size:18px; font-weight:500; color:#111;}
+.search-place-box .search-units .search-txt {overflow:hidden; position:relative; border:1px solid #cbced7; border-radius:8px;}
+.search-place-box .search-units .search-txt input[type="search"] {width:300px; height:50px; padding:0 10px; background-color:#fff; font-size:16px;}
+.search-place-box .search-units .search-txt .search-btn {position:absolute; right:0; top:0; width:50px; height:50px; background-color:gray;}
+.search-place-box .his-category {display:flex; align-items:center; padding:18px 0; border-top:1px solid #eee;}
+.search-place-box .his-category .title {margin-right:10px; font-size:18px; font-weight:500; color:#111;}
+.search-place-box .his-category .refresh-btn {width:38px; height:38px; margin-right:8px; border:1px solid #eee; border-radius:50%; background-color:red;}
+.search-place-box .his-category .flags {display:flex; align-items:center; gap:6px;}
+.search-place-box .his-category .flags .flag {display:flex; align-items:center; height:38px; line-height:36px; padding:0 16px; border:1px solid #eee; border-radius:20px; background-color:#fff;}
+.search-place-box .his-category .flags .flag .delete {width:12px; height:12px; margin-left:6px; background-color:red;}
