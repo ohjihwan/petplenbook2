@@ -137,8 +137,11 @@
 .total-box .sorts .sort-unit .btn {background-color:transparent; font-size:16px; font-weight:500; color:#111;}
 .total-box .sorts .sort-unit .btn.-active {font-weight:600;}
 .total-box .sorts .sort-unit:last-child {padding-right:0;}
+.total-box .sorts .sort-unit:last-child::after {display:none;}
 
 .location-list .list {display:grid; grid-template-columns:repeat(4, 1fr); gap:14px 30px; padding:40px 35px;}
+.location-list .list .item {position:relative;}
+.location-list .list .favor-check {position:absolute; right:10px; top:10px; z-index:10; width:30px; height:30px; appearance:auto}
 .location-list .list .img-box {height:240px;}
 .location-list .list .img-box img {width:100%; height:100%; object-fit:cover; object-position:50% 50%;}
 .location-list .list .info-box {margin-top:24px; padding-bottom:22px; text-align:center;}
