@@ -101,7 +101,6 @@
     장소찾기
 */
 .location-area {margin-top:100px;}
-.location-area .main-title {margin-bottom:60px; font-size:48px; font-weight:500; color:#111; text-align:center;}
 .location-area .location-box .location-tab {display:flex; justify-content:center; gap:14px; align-items:center;}
 .location-area .location-box .location-tab .tab-item {flex:1; height:48px;}
 .location-area .location-box .location-tab .tab-item > button {width:100%; height:100%; border:1px solid #2d3134; border-radius:4px; background-color:transparent; font-size:20px; color:#000}

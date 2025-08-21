@@ -188,3 +188,4 @@ body.lock {overflow:hidden;}
 .swal2-container .swal2-styled:focus {box-shadow: none; outline: none;}
 .swal2-container .swal2-styled span {/* 버튼 내부 텍스트 span (자동 생성되는 경우) */}
 
+.main-title {margin-bottom:60px; font-size:48px; font-weight:500; color:#111; text-align:center;}
